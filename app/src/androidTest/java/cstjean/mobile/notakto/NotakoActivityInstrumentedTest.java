@@ -1,8 +1,11 @@
 package cstjean.mobile.notakto;
 
+
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 
 
@@ -18,20 +21,21 @@ import androidx.test.uiautomator.UiDevice;
 
 @RunWith(AndroidJUnit4.class)
 public class NotakoActivityInstrumentedTest {
+
     @Rule
     public ActivityScenarioRule<NotaktoActivity> rule = new ActivityScenarioRule<>(NotaktoActivity.class);
 
     @Test
-    public void testResultat() throws RemoteException {
+    public void testVictoireJoueur1() throws RemoteException {
+        final String texte = "Joueur 1 est victorieux!";
 
-        UiDevice device = UiDevice.getInstance(getInstrumentation());
-        device.setOrientationLeft();
+        /*UiDevice device = UiDevice.getInstance(getInstrumentation());
+        device.setOrientationLeft();*/
 
         onView(withId(R.id.btn0)).perform(click());
         onView(withId(R.id.btn1)).perform(click());
         onView(withId(R.id.btn2)).perform(click());
-
-
+        onView(withId(R.id.textView2)).check(matches(withText(texte)));
 
     }
 }

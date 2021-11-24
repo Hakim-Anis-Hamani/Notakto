@@ -50,9 +50,9 @@ public class NotaktoFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_notakto, container, false);
 
         for (int i = 0; i < buttons.length; i++) {
-            String buttonId = "button" + i;
+            String buttonId = "btn" + i;
             int resssoureId = getResources().getIdentifier(buttonId,
-                    "id", Objects.requireNonNull(getActivity()).getPackageName());
+                    "id", getActivity().getPackageName());
             buttons[i] = view.findViewById(resssoureId);
             buttons[i].setOnClickListener(this);
         }
