@@ -5,6 +5,4 @@
     <string name="tour_Deuxieme">Tour au Joueur 2</string>
     <string name="victoire_Premier">Joueur 1 est victorieux!</string>
     <string name="victoire_Deuxieme">Joueur 2 est victorieux!</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
 </resources>

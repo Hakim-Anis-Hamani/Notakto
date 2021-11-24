@@ -1,9 +1,9 @@
 package cstjean.mobile.notakto;
 
-import org.Test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
-import static org.junit.Assert.*;
-
+import org.junit.Test;
 
 public class TestNotakto {
 
