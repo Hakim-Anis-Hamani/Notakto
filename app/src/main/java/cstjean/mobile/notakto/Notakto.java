@@ -1,27 +1,38 @@
 package cstjean.mobile.notakto;
 
 /**
- * */
+ * Classe Principale pour le fonctionnement du Notakto.
+ *
+ * @author Hakim-Anis Hamani
+ */
 public class Notakto {
+
     /**
- * */
- public static Boolean verificationDefaite() {
+     * Classe permettant la vérification de victoire.
+     *
+     * @return possibité de défaite
+     */
+    public static Boolean verificationDefaite() {
         for (int[] positionPerdante : SingletonNotakto.getInstance().getPosibilitePerdante()) {
-            if (SingletonNotakto.getInstance().getCaseUtilise()[positionPerdante[0]] &&
-                    SingletonNotakto.getInstance().getCaseUtilise()[positionPerdante[0]] == SingletonNotakto.getInstance().getCaseUtilise()[positionPerdante[1]] &&
-                    SingletonNotakto.getInstance().getCaseUtilise()[positionPerdante[0]] == SingletonNotakto.getInstance().getCaseUtilise()[positionPerdante[2]]) {
+            if (SingletonNotakto.getCaseUtilise()[positionPerdante[0]] &&
+                    SingletonNotakto.getCaseUtilise()[positionPerdante[0]] ==
+                            SingletonNotakto.getCaseUtilise()[positionPerdante[1]] &&
+                    SingletonNotakto.getCaseUtilise()[positionPerdante[0]] ==
+                            SingletonNotakto.getCaseUtilise()[positionPerdante[2]]) {
                 return true;
 
             }
         }
         return false;
     }
+
     /**
-     * */
+     * Méthode permettant initialisation et la réinitialisation du jeu.
+     */
     public static void reinitialiser() {
-        SingletonNotakto.getInstance().setTourJoueur1(true);
+        SingletonNotakto.setTourJoueur1(true);
         for (int i = 0; i < 9; i++) {
-            SingletonNotakto.getInstance().getCaseUtilise()[i] = false;
+            SingletonNotakto.getCaseUtilise()[i] = false;
         }
     }
 }

@@ -1,21 +1,21 @@
 package cstjean.mobile.notakto;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
 import android.util.Log;
 
-
-
 /**
- * Classe principale Notacto,
+ * Classe principale Notacto.
+ *
  * @author Hakim-Anis Hamani
  */
 public class NotaktoActivity extends AppCompatActivity {
 
-
+    /**
+     * Méthode ayant pour but de générer la fragmentation de l'activité de l'application.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
